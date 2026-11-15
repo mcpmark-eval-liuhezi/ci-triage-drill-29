@@ -1,0 +1,14 @@
+name: ci-triage-drill
+
+# Manual trigger only — purpose-built red-run for the maintainer onboarding session.
+on:
+  workflow_dispatch:
+
+jobs:
+  drill:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print DRILL-FAIL marker and exit non-zero
+        run: |
+          echo "DRILL-FAIL"
+          exit 1
